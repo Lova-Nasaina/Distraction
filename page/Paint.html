@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSN Distraction</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/stylePagePrincipale.css">
+    <link rel="stylesheet" href="../css/Paint.css">
+    
+</head>
+<body>
+
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../image/temps-de-travail.jpg" alt="temps-de-travail">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">NSN Distraction</span>
+                    <span class="profession">Site de distraction</span>
+                </div>
+            </div>
+            
+            <!-- <i class="fa fa-chevron-right toggle"></i> -->
+            <i class="fa fa-chevron-right toggle"    ></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                        <i class="fa fa-search icon"></i>
+                        <input type="text" placeholder="Rechercher..">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Paint.html">
+                            <i class="fa fa-pen icon"></i>
+                            <span class="text nav-text">Jeux de Paint</span>
+                        </a>
+                    </li>
+                    <!-- -------------------------------------- -->
+
+                    <li class="nav-link">
+                        <a href="Dactylo.html">
+                            <i class="fa fa-computer icon"></i>
+                            <span class="text nav-text">Dactylographie</span>
+                        </a>
+                    </li>
+                    <!-- --------------------------------------------- -->
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa fa-home icon"></i>
+                            <span class="text nav-text">Pierre/feuille/Sciseau</span>
+                        </a>
+                    </li>
+                    <!-- --------------------------------------------------- -->
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="fa fa-bell icon"></i>
+                            <span class="text nav-text">Don/Facture</span>
+                        </a>
+                    </li>
+                    <!-- ---------------------------------------------------------- -->
+                    
+                    <!-- --------------------------------------------- -->
+                    
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="../pagePrincipale.html">
+                        <i class="fas fa-external-link-alt icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class="fa fa-moon icon moon"></i>
+                        <i class="fa fa-sun icon  sun"></i>
+                    </div>
+                    <span class="mode-text text">Mode Sombre</span>
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+
+        </div>
+    </nav>
+    <section class="home">
+        <div id="IDPaint">
+          <div class="container">
+            <section class="tools-board">
+                <div class="row">
+                    <label class="title">Forme</label>
+                    <ul class="options">
+                        <li class="option tool" id="rectangle">
+                            <i class="fa fa-home sary"></i>
+                            <span>Rectangle</span>
+                        </li>
+                        <li class="option tool" id="circle">
+                            <i class="fa fa-home sary"></i>
+                            <span>Cercle</span>
+                        </li>
+                        <li class="option tool" id="triangle">
+                            <i class="fa fa-home sary"></i>
+                            <span>Triangle</span>
+                        </li>
+                        <li class="option">
+                            <input type="checkbox" id="fill-color">
+                            <label for="fill-color">Fill Color</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <label class="title">Options</label>
+                    <ul class="options">
+                        <li class="option active tool" id="brush">
+                            <i class="fa fa-home"></i>
+                            <span>Pain</span>
+                        </li>
+                        <li class="option tool" id="eraser">
+                            <i class="fa fa-home"></i>
+                            <span>Gumme</span>
+                        </li>
+                        <li class="option">
+                            <input type="range" id="size-slider" min="1" max="30" value="5">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row colors">
+                    <label class="title">Colors</label>
+                    <ul class="options">
+                        <li class="option"></li>
+                        <li class="option"></li>
+                        <li class="option selected" ></li>
+                        <li class="option"></li>
+                        <li class="option">
+                            <input type="color" id="color-picker" value="#4A98F7">
+                        </li>
+                    </ul>
+                </div>
+                <div class="row buttons">
+                    <button class="clear-canvas">Clear Canvas</button>
+                    <button class="save-img">Save As Image</button>
+                </div>
+            </section>
+            <section class="drawing-board">
+                <canvas></canvas>
+            </section>
+         </div> 
+      </div>
+    </section>
+
+    <script src="../jquery-3.6.0.js"></script>
+    <script src="../script/scriptPagePrincipale.js"></script>
+    <script src="../script/Paint.js"></script>
+
+</body>
+</html>

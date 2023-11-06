@@ -1,0 +1,213 @@
+
+:root {
+    /* ---------- couleur: -------------- */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+    /* --body-color: lightgrey;
+    --sidebar-color: #fff;
+    --primary-color: rgb(224, 174, 37);
+    --primary-color-ligth: rgb(224, 186, 81);
+    --toggle-color: #797175;
+    --text-color: #707070; */
+    --other-text-color: black;
+    --aloka-color: rgba(0, 0, 0, 0.2);
+    --champ: #fff;
+
+
+    /* ------------- Transition ---------------- */
+    --tran-02: all 0.2s ease ;
+    --tran-03: all 0.3s ease ;
+    --tran-04: all 0.4s ease ;
+    --tran-05: all 0.5s ease ;
+}
+
+
+#IDPaint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--body-color);
+    /* background: red; */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1050px;
+
+}
+
+section{
+    background: var(--champ);
+    border-radius: 7px ;
+}
+
+.tools-board {
+    width: 210px;
+    padding: 15px 22px 0;
+}
+
+.tools-board .row{
+    margin-bottom: 20px;
+}
+
+.row .options{
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;    
+}
+
+.option:is(:hover , .active) .sary{
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span, label){
+    color: #5A6168;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.option:is(:hover , .active) :where(span, label){
+    color: #4A98F7;
+}
+
+.option #fill-color{
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+}
+
+#fill-color:checked ~ label{
+    color: #4A98F7;
+}
+
+.option #size-slider{
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+}
+
+.colors .options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-top: 3px;
+    position: relative;
+}
+
+.colors .option:nth-child(1){
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+}
+
+.colors .option:nth-child(2){
+    background-color: #000;
+}
+
+.colors .option:nth-child(3){
+    background-color: #E02020;
+}
+
+.colors .option:nth-child(4){
+    background-color: #6dd400;
+}
+
+.colors .option:nth-child(5){
+    background-color: #4A98F7;
+}
+
+.colors .option.selected::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    border: 2px solid #fff;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before{
+    border-color: #ccc;
+}
+
+.option #color-picker{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.buttons button{
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    font-size: 0.9rem;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons .clear-canvas{
+    color: #6C757D;
+    border: 1px solid #6C757D;
+    transition: all 0.3s ease;
+}
+
+.clear-canvas:hover{
+    color: #fff;
+    background: #6C757D;
+
+}
+
+.buttons .save-img{
+    background: #4A98F7;
+    border: 1px solid #4A98F7;
+}
+
+.drawing-board{
+    flex: 1;
+}
+
+.drawing-board canvas{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
